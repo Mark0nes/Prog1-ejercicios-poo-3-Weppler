@@ -1,4 +1,4 @@
-namespace EjerciciosPOO3.Ejercicio1Vehiculo;
+namespace EjerciciosPOO3.Ejercicio1Vehiculos;
 
 public class Vehiculo
 {
@@ -13,10 +13,10 @@ public class Vehiculo
 
         if (anio < 1900)
             throw new AnioException(anio);
-        
+        Anio = anio;
     }
 
-    public string Describir()
+    public virtual string Describir()
     {
         return $"{Marca} {Modelo} ({Anio})";
     }

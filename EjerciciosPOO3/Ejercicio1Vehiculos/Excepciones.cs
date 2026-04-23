@@ -1,4 +1,4 @@
-namespace EjerciciosPOO3.Ejercicio1Vehiculo;
+namespace EjerciciosPOO3.Ejercicio1Vehiculos;
 
 public class AnioException : Exception
 {

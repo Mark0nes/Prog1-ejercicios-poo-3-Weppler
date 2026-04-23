@@ -1,23 +1,17 @@
-namespace EjerciciosPOO3.Ejercicio1Vehiculo;
+namespace EjerciciosPOO3.Ejercicio1Vehiculos;
 
 public class Moto : Vehiculo 
 {
     public bool TieneSidecar;
 
-    public Moto(bool tieneSidecar)
+    public Moto(string marca, string modelo, int anio, bool tieneSidecar)
+        : base(marca, modelo, anio)
     {
         TieneSidecar = tieneSidecar;
-
     }
 
-    public string Describir()
+    public override string Describir()
     {
-        if (tieneSidecar)
-        {
-            return $" - con sidecar";
-        } else
-        {
-            return $" - sin sidecar";
-        }
+        return base.Describir() + (TieneSidecar ? " - con sidecar" : " - sin sidecar");
     }
 }
