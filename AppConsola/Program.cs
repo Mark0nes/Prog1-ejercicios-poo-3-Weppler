@@ -20,3 +20,16 @@ static void Ejerciciovehiculos()
         Console.WriteLine(vehiculo.Describir());
     }
 }
+
+try
+{
+    Vehiculo vehiculoPrueba = new Vehiculo("Prueba", "", 1820);
+}
+catch (ArgumentException ex)
+{
+    Console.WriteLine($"Error: {ex.Message}");
+}
+catch (AnioExeption ex)
+{
+    Console.WriteLine($"Error: {ex.Message}");
+}

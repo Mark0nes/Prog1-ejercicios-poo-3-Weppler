@@ -8,6 +8,9 @@ public class Vehiculo
 
     public Vehiculo(string marca, string modelo, int anio)
     {
+        if (marca.IsNullOrWhiteSpace || modelo.IsNullOrWhiteSpace)
+            throw new ArgumentException("Ninguno de los datos ingresados pueden estar vacios");
+
         Marca=marca;
         Modelo=modelo;
 
