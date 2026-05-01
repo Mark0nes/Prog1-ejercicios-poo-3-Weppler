@@ -1,5 +1,4 @@
 using Ejercicio3Libreria;
-using System.Diagnostics.Contracts;
 using System.Linq;
 
 Ejercicio3Libreria();
