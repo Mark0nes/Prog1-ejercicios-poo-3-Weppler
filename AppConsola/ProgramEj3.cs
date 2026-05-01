@@ -1,7 +1,7 @@
 using Ejercicio3Libreria;
 using System.Linq;
 
-Ejercicio3Libreria();
+EjercicioLibreria();
 static void EjercicioLibreria()
 {
     List<Publicacion> publicaciones = new List<Publicacion>();
