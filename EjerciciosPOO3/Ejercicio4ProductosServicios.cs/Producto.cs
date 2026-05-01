@@ -8,6 +8,13 @@ namespace Ejercicio4ProductosServicios
 
         public Producto(string nombre, decimal precio, string categoria)
         {
+            if (nombre.IsNullOrWhiteSpace())
+                throw new ArgumentException("El nombre del producto no puede estar vacío.");
+            if (precio < 0)
+                throw new ArgumentException("El precio del producto no puede ser negativo.");
+            if (categoria.IsNullOrWhiteSpace())
+                throw new ArgumentException("La categoría del producto no puede estar vacía.");
+
             Nombre = nombre;
             Precio = precio;
             Categoria = categoria;
