@@ -20,3 +20,12 @@ static void EjercicioBebidas()
         Console.WriteLine($"{bebida.MostrarPrecio()} - {bebida.Preparar()}");
     }
 }
+
+try
+{
+    Bebida bebidaPrueba = new Bebida("Agua", -10.0);
+}
+catch (ArgumentException ex)
+{
+    Console.WriteLine($"Error al crear bebida: {ex.Message}");
+}
