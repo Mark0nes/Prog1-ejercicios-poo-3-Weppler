@@ -5,10 +5,10 @@ static void EjercicioEmpleados()
 {
     RecursosHumanos recursosHumanos = new RecursosHumanos();
 
-    recursosHumanos.AgregarEmpleado(new Empleado("Juan", 1, TipoEmpleado.Permanente, 200000, 5));
-    recursosHumanos.AgregarEmpleado(new Empleado("María", 2, TipoEmpleado.Contratado, 100000, 4));
-    recursosHumanos.AgregarEmpleado(new Empleado("Pedro", 3, TipoEmpleado.Pasante, 150000));
-    recursosHumanos.AgregarEmpleado(new Empleado("Ana", 4, TipoEmpleado.Pasante, 150000));
+    recursosHumanos.AgregarEmpleado(new EmpleadoPermanente("Juan", 1, 200000, 5));
+    recursosHumanos.AgregarEmpleado(new EmpleadoContratado("María", 2, 100000, 4));
+    recursosHumanos.AgregarEmpleado(new EmpleadoPasante("Pedro", 3, 150000));
+    recursosHumanos.AgregarEmpleado(new EmpleadoPasante("Ana", 4, 150000));
 
     Console.WriteLine($"Nomina total: {recursosHumanos.CalcularNomina()}");
     Console.WriteLine($"Mejor pago: {recursosHumanos.ObtenerMejorPago().CalcularPago()} ({recursosHumanos.ObtenerMejorPago().Nombre})");
