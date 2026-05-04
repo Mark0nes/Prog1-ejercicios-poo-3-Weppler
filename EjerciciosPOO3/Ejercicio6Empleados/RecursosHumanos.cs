@@ -16,6 +16,8 @@ public class RecursosHumanos
 
     public decimal CalcularNomina()
     {
+        if (empleados.Count == 0)
+            throw new InvalidOperationException("No hay empleados registrados.");
         return empleados.Sum(e => e.CalcularSueldo());
     }
 
@@ -29,6 +31,8 @@ public class RecursosHumanos
 
     public List<Empleado> ListarPorTipo(TipoEmpleado tipo)
     {
+        if (empleados.Count == 0)
+            throw new InvalidOperationException("No hay empleados registrados.");
         return empleados.Where(e => e.Tipo == tipo).ToList();
     }
 }
