@@ -8,7 +8,7 @@ public class Vehiculo
 
     public Vehiculo(string marca, string modelo, int anio)
     {
-        if (marca.IsNullOrWhiteSpace || modelo.IsNullOrWhiteSpace)
+        if (string.IsNullOrEmpty(marca) || string.IsNullOrEmpty(modelo))
             throw new ArgumentException("Ninguno de los datos ingresados pueden estar vacios");
 
         Marca=marca;
